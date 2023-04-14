@@ -42,7 +42,7 @@ async function main() {
     const actionHandler = new ActionHandler(
       agentIds,
       messageBus,
-      moduleManager,
+      moduleManager
     );
 
     const store = new JsonStore<Event[]>(new FileStore([id]));
@@ -54,7 +54,7 @@ async function main() {
       memory,
       messageBus,
       moduleManager,
-      actionHandler,
+      actionHandler
     );
     await agent.start();
   }
